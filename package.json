@@ -26,9 +26,12 @@
     "arktype": "^2.2.3",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "drizzle-cuid2": "^2.2.0",
+    "drizzle-orm": "^0.45.2",
     "effect": "^4.0.0-rc.115",
     "lucide-react": "^1.46.0",
     "nitro": "3.0.260903-beta",
+    "postgres": "^3.4.9",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "tailwind-merge": "^3.0.2",
@@ -37,6 +40,7 @@
   },
   "devDependencies": {
     "@biomejs/biome": "2.5.13",
+    "@electric-sql/pglite": "^0.5.8",
     "@tailwindcss/typography": "^0.5.16",
     "@tanstack/devtools-vite": "latest",
     "@tanstack/router-cli": "^1.132.0",
@@ -44,6 +48,7 @@
     "@types/react": "^19.2.0",
     "@types/react-dom": "^19.2.0",
     "@vitejs/plugin-react": "^6.0.1",
+    "drizzle-kit": "^0.31.10",
     "typescript": "^7.0.2",
     "vite": "^8.0.0"
   },

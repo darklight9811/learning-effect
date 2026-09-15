@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useIndexTasks } from "@/domains/tasks/io/hooks";
-import { indexQueryOptions } from "@/domains/tasks/io/query";
+import { useIndexTasks } from "@/features/tasks/io/hooks";
+import { indexQueryOptions } from "@/features/tasks/io/query";
 
 export const Route = createFileRoute("/")({
 	component: Home,

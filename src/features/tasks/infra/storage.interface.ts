@@ -1,5 +1,5 @@
 import { Context, type Effect } from "effect";
-import type { taskSchema } from "../schema";
+import type { taskSchema } from "../domain/schema";
 
 export class TaskStorage extends Context.Service<
 	TaskStorage,

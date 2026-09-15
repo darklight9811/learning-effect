@@ -1,6 +1,6 @@
 import { Effect } from "effect";
 
-import { AppServices, type AppServicesType } from "@/domains/services";
+import { AppServices, type AppServicesType } from "@/features/services";
 
 export const program = <
 	Eff extends Effect.Effect<unknown, unknown, AppServicesType>,

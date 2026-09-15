@@ -1,5 +1,5 @@
 import { Effect, Layer } from "effect";
-import type { taskSchema } from "../../schema";
+import type { taskSchema } from "../../domain/schema";
 import { TaskStorage } from "../storage.interface";
 
 const storage = [] as (typeof taskSchema.infer)[];
