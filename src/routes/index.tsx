@@ -1,16 +1,16 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useIndexTasks } from "@/features/tasks/io/hooks";
-import { indexQueryOptions } from "@/features/tasks/io/query";
+import { useListTasks } from "@/features/tasks/io/hooks/list";
+import { listQueryOptions } from "@/features/tasks/io/query/list";
 
 export const Route = createFileRoute("/")({
 	component: Home,
 	loader({ context }) {
-		return Promise.all([context.queryClient.query(indexQueryOptions())]);
+		return Promise.all([context.queryClient.query(listQueryOptions())]);
 	},
 });
 
 function Home() {
-	const { data } = useIndexTasks();
+	const { data } = useListTasks();
 
 	return (
 		<div className="p-8">
