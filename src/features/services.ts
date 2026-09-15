@@ -4,8 +4,7 @@ import { dbTaskStorage } from "./tasks/infra/storage/db.storage";
 import { memoryUserStorage } from "./users/infra/storage/memory.storage";
 
 export const AppServices = Layer.mergeAll(
-	PostgresStorage,
-	dbTaskStorage,
+	Layer.provide(dbTaskStorage, PostgresStorage),
 	memoryUserStorage,
 );
 
