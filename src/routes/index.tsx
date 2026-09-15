@@ -1,9 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { getTask } from "@/domains/tasks/io/server-actions/get-task";
+import { indexTasks } from "@/domains/tasks/io/server-actions/index-tasks";
 
 export const Route = createFileRoute("/")({
 	component: Home,
-	loader: () => getTask({ data: "some-task-id" }),
+	loader: () => indexTasks(),
 });
 
 function Home() {
