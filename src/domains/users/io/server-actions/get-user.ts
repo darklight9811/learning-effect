@@ -1,8 +1,8 @@
 import { createServerFn } from "@tanstack/react-start";
 import { type } from "arktype";
 import { program } from "@/domains/services";
-import { getTaskUseCase } from "../../service/get-task";
+import { getUserUseCase } from "../../service/get-user";
 
-export const getTask = createServerFn()
+export const getUser = createServerFn()
 	.validator(type("string"))
-	.handler(({ data }) => program(getTaskUseCase(data)));
+	.handler(({ data }) => program(getUserUseCase(data)));

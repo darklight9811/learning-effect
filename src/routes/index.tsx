@@ -1,14 +1,18 @@
-import { createFileRoute } from '@tanstack/react-router'
+import { createFileRoute } from "@tanstack/react-router";
+import { getTask } from "@/domains/tasks/io/server-actions/get-task";
 
-export const Route = createFileRoute('/')({ component: Home })
+export const Route = createFileRoute("/")({
+	component: Home,
+	loader: () => getTask({ data: "some-task-id" }),
+});
 
 function Home() {
-  return (
-    <div className="p-8">
-      <h1 className="text-4xl font-bold">Welcome to TanStack Start</h1>
-      <p className="mt-4 text-lg">
-        Edit <code>src/routes/index.tsx</code> to get started.
-      </p>
-    </div>
-  )
+	const data = Route.useLoaderData();
+
+	return (
+		<div className="p-8">
+			<h1 className="text-4xl font-bold">Welcome to TanStack Start</h1>
+			<pre>{JSON.stringify(data, null, 4)}</pre>
+		</div>
+	);
 }
