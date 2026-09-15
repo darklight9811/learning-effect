@@ -7,7 +7,7 @@ import {
 	Scripts,
 } from "@tanstack/react-router";
 import { TanStackRouterDevtoolsPanel } from "@tanstack/react-router-devtools";
-import appCss from "../modules/program/styles.css?url";
+import appCss from "@/modules/css/styles.css?url";
 
 interface MyRouterContext {
 	queryClient: QueryClient;
