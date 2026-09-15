@@ -1,9 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
-import { indexTasks } from "../server-actions";
+import { indexQueryOptions } from "../query";
 
 export const useIndexTasks = () => {
-	return useQuery({
-		queryKey: ["tasks", "index"],
-		queryFn: () => indexTasks(),
-	});
+	return useQuery(indexQueryOptions());
 };
