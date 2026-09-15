@@ -2,7 +2,7 @@ import { Effect } from "effect";
 import { AppError } from "@/modules/errors/app-error";
 import { UserStorage } from "../infra/storage.interface";
 
-export const getUserUseCase = (id: string) =>
+export const showUserUseCase = (id: string) =>
 	Effect.gen(function* () {
 		const storage = yield* UserStorage;
 		const user = yield* storage.show(id);
