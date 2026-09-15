@@ -5,6 +5,16 @@ export class AppError extends Data.TaggedError("AppError")<{
 	readonly code: string;
 	readonly message?: string;
 }> {
+	static unauthorized(message?: string) {
+		return Effect.fail(
+			new AppError({
+				status: 401,
+				code: "unauthorized",
+				message,
+			}),
+		);
+	}
+
 	static notFound(message?: string) {
 		return Effect.fail(
 			new AppError({
